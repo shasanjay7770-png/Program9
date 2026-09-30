@@ -1,6 +1,3 @@
-CREATE DATABASE CollegeDB;
-USE CollegeDB;
-
 CREATE TABLE Department (
     DepartmentID INT PRIMARY KEY,
     DepartmentName VARCHAR(50)
@@ -23,9 +20,7 @@ INSERT INTO Student (StudentID, StudentName, DepartmentID) VALUES
 (1003, 'Karthik', 101),
 (1004, 'Nisha', 103);
 
-SELECT
-    Student.StudentName,
-    Department.DepartmentName
+SELECT StudentName, DepartmentName
 FROM Student
 INNER JOIN Department
 ON Student.DepartmentID = Department.DepartmentID;
